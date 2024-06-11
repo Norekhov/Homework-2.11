@@ -75,7 +75,7 @@ class CalculatorServiceParametersTest {
 	@ParameterizedTest
 	@MethodSource("paramsForDivideExceptionTest")
 	void divideExceptionTest(int num1, int num2) {
-		Assertions.assertThrows(ValidationException.class, () -> calculatorService.divide(5, 0));
+		Assertions.assertThrows(ValidationException.class, () -> calculatorService.divide(num1, num2));
 	}
 
 	static Stream<Arguments> paramsForDivideExceptionTest() {
